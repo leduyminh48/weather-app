@@ -1,0 +1,118 @@
+<li id="db-<%= uid %>" class="city-list__item">
+    <div class="<%= forecast.currently.icon.match('snow') !== null? 'snow' : forecast.currently.icon.match('rain') !== null? 'rain' : '' %>">
+        <section class="forecast forecast--hourly">
+            <div class="forecast__half">
+                <div class="city-desc">
+                    <p class="update">
+                        <span class="sr-only">Time of last update:</span>
+                        <time class="update__time" datetime="<%= updateTime %>"><%= getTimeByOffset(updateTime,
+                            forecast.offset) %>
+                        </time>
+                        <a data-update="<%= uid %>" href="#" class="update__button" role="button"
+                           title="Click here to update forecast data for this city">
+                            <span class="sr-only">Click here to update data</span>
+                            <i class="icon-refresh"></i>
+                        </a>
+                    </p>
+                    <h1 class="city-desc__name"><%= cityName %></h1>
+
+                    <h2 class="city-desc__date">
+                        <time datetime="<%= convertToDate(forecast.daily.data[0].time) %>"><%=
+                            convertToDate(forecast.daily.data[0].time) %>
+                        </time>
+                    </h2>
+                </div>
+                <div class="current clearfix">
+                    <div class="current__icon"><i class="icon-<%= forecast.currently.icon %>"></i></div>
+                    <div class="current__text">
+                        <p class="current__temp"><%= tempUnit === "C"? forecast.currently.temperature.toFixed(0) :
+                            convertToF(forecast.currently.temperature) %>&deg;</p>
+
+                        <p class="current__status">//<%= forecast.currently.summary %></p>
+                    </div>
+                    <div class="current__moon">
+                        <p class="current__moon-icon"><i
+                                class="icon-<%= getMoonPhase(forecast.daily.data[0].moonPhase) %>"></i></p>
+
+                        <p class="current__moon-time">
+                            <span class="sr-only">When the Moon set:</span>
+                            <time datetime="<%= getTimeByOffset(forecast.daily.data[0].sunsetTime, forecast.offset) %>">
+                                <%= getTimeByOffset(forecast.daily.data[0].sunsetTime, forecast.offset) %>
+                            </time>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast__half">
+                <ul class="hourly clearfix">
+                    <% for (var i = 0; i < 24; i++) { var data = forecast.hourly.data[i]; %>
+                    <li class="hourly__item">
+                        <time class="hourly__item-time" datetime="getTimeByOffset(data.time, forecast.offset)"><%=
+                            getTimeByOffset(data.time, forecast.offset) %>
+                        </time>
+                        <p class="hourly__item-icon"><i class="icon-<%= data.icon %>"></i></p>
+
+                        <p class="hourly__item-temp"><%= tempUnit === "C"? data.temperature.toFixed(0) :
+                            convertToF(data.temperature) %>&deg;</p>
+                    </li>
+                    <% } %>
+                </ul>
+                <ul class="add-info">
+                    <li class="add-info__item">
+                        <p class="add-info__item-icon"><i class="icon-humidity"></i></p>
+
+                        <p class="add-info__item-data"><span class="data-humidity"><%= (parseFloat(forecast.currently.humidity) * 100).toFixed(0) %>%</span>
+                        </p>
+                    </li>
+                    <li class="add-info__item">
+                        <p style="transform: rotate(<%= forecast.currently.windBearing %>deg)"
+                           class="add-info__item-icon"><i class="icon-wind-direction"></i><span
+                                style="transform: rotate(-<%= forecast.currently.windBearing %>deg)"
+                                class="add-info__item-wind-direction"><%= getWindDirection(forecast.currently.windBearing) %></span>
+                        </p>
+
+                        <p class="add-info__item-data"><span
+                                class="data-wind-velocity"><%= parseFloat(forecast.currently.windSpeed).toFixed(1) %><sup>m/c</sup></span>
+                        </p>
+                    </li>
+                    <li class="add-info__item">
+                        <p class="add-info__item-icon"><i class="icon-sunrise"></i></p>
+
+                        <p class="add-info__item-data">
+                            <time class="data-sunrise" datetime="<%= forecast.daily.data[0].sunriseTime %>"><%=
+                                getTimeByOffset(forecast.daily.data[0].sunriseTime, forecast.offset) %>
+                            </time>
+                        </p>
+                    </li>
+                    <li class="add-info__item">
+                        <p class="add-info__item-icon"><i class="icon-sunset"></i></p>
+
+                        <p class="add-info__item-data">
+                            <time class="data-sunset" datetime="<%= forecast.daily.data[0].sunsetTime %>"><%=
+                                getTimeByOffset(forecast.daily.data[0].sunsetTime, forecast.offset) %>
+                            </time>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="forecast forecast--daily">
+            <ul class="daily">
+                <% for (var i = 0; i < 7; i++) { var data = forecast.daily.data[i]; %>
+                <li class="daily__item">
+                    <p class="daily__item-text clearfix">
+                        <span class="dail y__item-weekday"><%= i!==0? convertToWeekday(data.time) : "Today" %></span>
+                        <span class="daily__item-icon"><i class="icon-<%= data.icon %>"></i></span>
+                    </p>
+
+                    <p class="daily__item-temp">
+                        <span class="daily__item-temp-text"><%= tempUnit === "C"? data.temperatureMin.toFixed(0) : convertToF(data.temperatureMin) %>&deg;</span>
+                        <span class="daily__item-temp-indicator"></span>
+                        <span class="daily__item-temp-text"><%= tempUnit === "C"? data.temperatureMax.toFixed(0) : convertToF(data.temperatureMax) %>&deg;</span>
+                    </p>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </div>
+</li>

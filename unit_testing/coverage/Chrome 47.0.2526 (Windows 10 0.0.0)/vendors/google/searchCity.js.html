@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for vendors\google\searchCity.js</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../../prettify.css"/>
+    <link rel="stylesheet" href="../../base.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1>
+            <a href="../../index.html">all files</a> / <a href="index.html">vendors/google/</a> searchCity.js
+        </h1>
+
+        <div class='clearfix'>
+            <div class='fl pad1y space-right2'>
+                <span class="strong">35.71% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>10/28</span>
+            </div>
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/10</span>
+            </div>
+            <div class='fl pad1y space-right2'>
+                <span class="strong">37.5% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>3/8</span>
+            </div>
+            <div class='fl pad1y space-right2'>
+                <span class="strong">35.71% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>10/28</span>
+            </div>
+    </div>
+    </div>
+    <div class='status-line low'></div>
+<pre><table class="coverage">
+    <tr>
+        <td class="line-count quiet">1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            11
+            12
+            13
+            14
+            15
+            16
+            17
+            18
+            19
+            20
+            21
+            22
+            23
+            24
+            25
+            26
+            27
+            28
+            29
+            30
+            31
+            32
+            33
+            34
+            35
+            36
+            37
+            38
+            39
+            40
+            41
+            42
+            43
+            44
+            45
+            46
+            47
+            48
+            49
+            50
+            51
+            52
+            53
+            54
+            55
+            56
+            57
+            58
+            59
+            60
+            61
+            62
+            63
+            64
+            65
+            66
+            67
+            68
+            69
+        </td>
+        <td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-yes">1×</span>
+            <span class="cline-any cline-yes">1×</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-yes">1×</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-yes">1×</span>
+            <span class="cline-any cline-yes">2×</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-yes">2×</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-yes">1×</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-yes">1×</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-no">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-neutral">&nbsp;</span>
+            <span class="cline-any cline-yes">1×</span>
+            <span class="cline-any cline-neutral">&nbsp;</span></td>
+        <td class="text"><pre class="prettyprint lang-js">define(["jquery",
+    "lodash",
+    "async!https://maps.googleapis.com/maps/api/js?key=AIzaSyAhZrD3LuU4EuGuINJJMVxouh-LJxWb7-8&amp;libraries=places"], function ($, _) {
+    "use strict";
+    var Autocomplete = function () {
+        this.collection = [];
+&nbsp;
+        this.queryOptions = {
+            types: ["(cities)"]
+        };
+&nbsp;
+        this.getGeocode = function (placeId, callback) {
+            var geocoder = new google.maps.Geocoder(),
+                coords = "";
+            geocoder.geocode({
+                'placeId': placeId
+            }, <span class="fstat-no" title="function not covered">function (results, status) {</span>
+<span class="cstat-no"
+      title="statement not covered">                if (status !== google.maps.GeocoderStatus.OK) {</span>
+<span class="cstat-no" title="statement not covered">                    console.log("Geocode service failed due to: " + status);</span>
+<span class="cstat-no" title="statement not covered">                    return;</span>
+                }
+<span class="cstat-no" title="statement not covered">                coords = results[0].geometry.location.lat() + "," + results[0].geometry.location.lng();</span>
+<span class="cstat-no" title="statement not covered">                callback(coords);</span>
+            });
+        };
+&nbsp;
+        this.getCitiesInfo = <span class="fstat-no" title="function not covered">function (predictions, callback, thisArg) {</span>
+<span class="cstat-no" title="statement not covered">            var self = this;</span>
+<span class="cstat-no" title="statement not covered">            _.each(predictions, <span class="fstat-no"
+                                                                                           title="function not covered">function (el) {</span></span>
+<span class="cstat-no" title="statement not covered">                if (el.place_id &amp;&amp; (el.types[0] === "locality" || el.types[0] === "administrative_area_level_1" || el.types[0] === "administrative_area_level_2")) {</span>
+&nbsp;
+<span class="cstat-no"
+      title="statement not covered">                    var offset = el.matched_substrings[0].offset,</span>
+                        matchLength = el.matched_substrings[0].length,
+                        matchedString = _.first(el.terms).value.slice(offset, offset + matchLength),
+                        otherParts = [_.first(el.terms).value.slice(0, offset), _.first(el.terms).value.slice(offset + matchLength)];
+&nbsp;
+<span class="cstat-no" title="statement not covered">                    self.collection.push({</span>
+                        placeId: el.place_id,
+                        matchedSubstring: matchedString,
+                        otherParts: otherParts,
+                        cityName: _.first(el.terms).value,
+                        countryName: _.last(el.terms).value
+                    });
+                }
+            });
+<span class="cstat-no" title="statement not covered">            callback.call(thisArg, self.collection);</span>
+        };
+&nbsp;
+        this.fetch = <span class="fstat-no" title="function not covered">function (text, callback, thisArg) {</span>
+<span class="cstat-no" title="statement not covered">            var self = this,</span>
+                service = new google.maps.places.AutocompleteService();
+&nbsp;
+<span class="cstat-no" title="statement not covered">            self.collection = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered">            service.getQueryPredictions({</span>
+                input: text,
+                types: self.queryOptions.types
+            }, <span class="fstat-no" title="function not covered">function (predictions, status) {</span>
+<span class="cstat-no" title="statement not covered">                if (status != google.maps.places.PlacesServiceStatus.OK) {</span>
+<span class="cstat-no" title="statement not covered">                    console.log("Autocomplete failed due to: " + status);</span>
+<span class="cstat-no" title="statement not covered">                    return;</span>
+                }
+<span class="cstat-no"
+      title="statement not covered">                self.getCitiesInfo(predictions, callback, thisArg);</span>
+            });
+        };
+    };
+&nbsp;
+    return new Autocomplete();
+});</pre>
+        </td>
+    </tr>
+</table></pre>
+    <div class='push'></div>
+    <!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+    Code coverage
+    generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Jan 16 2016 21:40:20 GMT+0200
+    (FLE Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+    window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+    };
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

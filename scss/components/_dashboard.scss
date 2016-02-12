@@ -1,0 +1,256 @@
+.city-list {
+  white-space: nowrap;
+  margin-bottom: 40px;
+  transition: transform 0.5s ease;
+  transform: translateZ(0);
+  &__item {
+    display: inline-block;
+    width: 100%;
+    white-space: normal;
+    vertical-align: top; //for IE
+    @media screen and (max-width: $breakpoint-ipad-portrait) {
+      text-align: center;
+    }
+  }
+}
+
+.forecast {
+  display: inline-block;
+  min-width: 320px;
+  width: 48%;
+  padding-left: 5px;
+  margin: 0 2% 0 -4px;
+  vertical-align: top;
+  &--daily {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  @media screen and (max-width: $breakpoint-ipad-portrait) {
+    width: 73%;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  @media screen and (max-width: $breakpoint-iphone) and (orientation: landscape) {
+    width: 95%;
+    &__half {
+      display: inline-block;
+      width: 49%;
+      margin: 0 1% 0 -4px;
+    }
+  }
+}
+
+.update {
+  font-size: 3em;
+  &__button {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.5em;
+  }
+}
+
+.city-desc {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 10px;
+  &__name {
+    font-size: 7.5em;
+    font-weight: normal;
+    word-wrap: break-word;
+  }
+  &__date {
+    font-size: 4em;
+    font-weight: normal;
+  }
+  @media screen and (max-width: 1700px) {
+    letter-spacing: 3px;
+  }
+}
+
+.current {
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.25);
+  @media screen and (max-width: $breakpoint-iphone) and (orientation: landscape) {
+    border-bottom: none;
+  }
+  &__icon {
+    float: left;
+    font-size: 16em;
+    vertical-align: top;
+    line-height: 1;
+    margin-right: 0.1em;
+  }
+  &__text {
+    line-height: 9em;
+    margin-right: 9em;
+    text-align: center;
+    @media screen and (max-width: $breakpoint-fontsize) {
+      margin-right: 4em;
+    }
+  }
+  &__temp {
+    font-size: 10em;
+  }
+  &__status {
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  &__moon {
+    padding-top: 2.5em;
+    text-align: center;
+    line-height: 5.5em;
+    &-icon {
+      font-size: 8em;
+    }
+    &-time {
+      font-size: 3em;
+    }
+  }
+}
+
+.hourly {
+  position: relative;
+  white-space: nowrap;
+  overflow-x: hidden;
+  &__item {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding: 20px 0;
+    &-time {
+      font-size: 2em;
+    }
+    &-icon {
+      font-size: 7em;
+    }
+    &-temp {
+      font-size: 4em;
+    }
+  }
+}
+
+.add-info {
+  white-space: nowrap;
+  &__item {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding-top: 30px;
+    &-icon {
+      position: relative;
+      font-size: 7em;
+    }
+    &-data {
+      font-size: 4em;
+    }
+    &-wind-direction {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -0.9em 0 0 -0.5em;
+      font-size: .3em;
+    }
+  }
+}
+
+.daily {
+  padding: 0 35px;
+  &__item {
+    padding: 29px 0 17px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+    &:last-child {
+      border: none;
+    }
+    &.last-child{
+      border: none;
+    }
+    &-text {
+      display: inline-block;
+      vertical-align: middle;
+      width: 15rem;
+      margin-right: 7%;
+      font-size: 3.5em;
+      text-transform: uppercase;
+      @media screen and (max-width: $breakpoint-iphone) {
+        width: 11rem;
+        font-size: 3em;
+      }
+    }
+    &-weekday {
+      float: left;
+    }
+    &-icon {
+      font-size: 1.4em;
+      float: right;
+    }
+    &-temp {
+      display: inline-block;
+      font-size: 3em;
+      &-indicator {
+        display: inline-block;
+        width: 12rem;
+        height: 28px;
+        border-radius: 14px;
+        background-color: #fff;
+        @media screen and (max-width: 480px) {
+          width: 9rem;
+        }
+      }
+    }
+    @media screen and (max-width: $breakpoint-iphone) {
+      white-space: nowrap;
+    }
+  }
+  @media screen and (max-width: $breakpoint-iphone) and (orientation: landscape) {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 50px 50px 25px;
+    justify-content: space-between;
+    text-align: center;
+    &__item {
+      display: inline-flex;
+      flex-flow: column wrap;
+      border: none;
+      &-text {
+        width: auto;
+        margin-right: 0;
+      }
+      &-weekday,
+      &-icon {
+        display: block;
+        float: none;
+      }
+      &-temp {
+        &-text {
+          display: block;
+        }
+        &-indicator {
+          height: 12rem;
+          width: 28px;
+        }
+      }
+    }
+  }
+}
+
+.slider-control {
+  text-align: center;
+  &__item {
+    display: inline-block;
+    font-size: 4em;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 730px) and (orientation: portrait) {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.icon-menu--show {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 4em;
+}

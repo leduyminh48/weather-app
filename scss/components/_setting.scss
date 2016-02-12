@@ -1,0 +1,44 @@
+.setting {
+  padding: 10px 0 0 50px;
+  background-color: #152132;
+}
+
+.scale-sys {
+  padding: 0 40px 15px 0;
+  font-size: 4em;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+  &__item {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.25);
+    &:first-child {
+      padding-right: 40px;
+      border-right: 2px solid rgba(255, 255, 255, 0.25);
+    }
+    &:nth-child(2) {
+      padding-left: 20px;
+    }
+    &--active {
+      color: #fff;
+    }
+  }
+  .icon-settings {
+    margin-top: 10px;
+  }
+}
+
+.dragger {
+  padding: 3rem 5rem 5rem 1rem;
+  font-size: 2.5em;
+  &:nth-child(2) {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.25);
+  }
+  &:last-child {
+    padding-bottom: 8rem;
+  }
+  &__desc {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+  }
+}

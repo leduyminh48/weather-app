@@ -1,0 +1,173 @@
+.menu {
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #081322;
+  justify-content: space-between;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%) translateZ(0);
+  width: $width-menu;
+  min-width: $width-menu-min;
+  transition: transform 1s ease;
+  overflow-x: visible;
+  z-index: 2;
+  &--upper {
+    position: relative;
+    overflow-x: visible;
+    overflow-y: auto;
+    margin-top: 75px;
+    padding-left: 42px;
+    flex-grow: 1;
+  }
+  &--open {
+    transform: translateX(0) translateZ(0);
+    .control #btn-menu {
+      transform: translateX(-50px);
+    }
+  }
+  &--suggest {
+    .added-cities {
+      display: none;
+      &#suggestion-list {
+        display: block;
+      }
+    }
+    .added-cities__item-checkbox--ct {
+      visibility: visible;
+    }
+  }
+  &--delete {
+    .added-cities__item-checkbox--ct {
+      visibility: visible;
+    }
+  }
+  @media screen and (max-width: $breakpoint-iphone) and (orientation: landscape) {
+    width: 100%;
+    flex-flow: row nowrap;
+    &--upper {
+      width: 50%;
+    }
+  }
+}
+
+.control {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  left: 42px;
+  padding: 0 50px 10px 50px;
+  font-size: 4em;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  overflow-x: visible;
+  z-index: 2;
+  &__search-form {
+    display: inline-block;
+    width: 70%;
+    #searchCity {
+      vertical-align: top;
+      width: 100%;
+      height: 35px;
+      box-sizing: border-box;
+      padding: 5px 15px;
+      border-radius: 17.5px;
+      border: none;
+      font-size: 0.5em;
+    }
+    @media screen and (max-width: 1740px) {
+      width: 60%;
+    }
+  }
+  #btn-menu {
+    position: absolute;
+    transform: translateX(-150px);
+    transition: transform 0.5s ease;
+  }
+  @media screen and (max-width: 1720px) {
+    padding-right: 10px;
+  }
+  @media screen and (max-width: $breakpoint-iphone) and (orientation: landscape) {
+    right: 50%;
+  }
+}
+
+.added-cities {
+  &#suggestion-list {
+    display: none;
+    text-align: center;
+  }
+  &__item {
+    padding: 10px 50px 10px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: left;
+    &:first-child {
+      padding-top: 10px;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    @media screen and (max-width: 1400px) {
+      padding-right: 5px;
+    }
+    &-icon,
+    &-temp {
+      float: left;
+      margin-right: 20px;
+    }
+    &-icon {
+      padding-top: 10px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 5.5em;
+    }
+    &-temp {
+      min-width: 90px;
+      font-size: 6em;
+      vertical-align: bottom;
+    }
+    &-desc {
+      padding-top: 10px;
+      float: left;
+      white-space: normal;
+    }
+    &-name {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 3em;
+    }
+    &-status {
+      text-transform: uppercase;
+      font-size: 2em;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    &-checkbox {
+      display: none;
+      &--ct {
+        position: relative;
+        display: inline-block;
+        margin-top: 15px;
+        width: 30px;
+        height: 30px;
+        background-color: #000;
+        cursor: pointer;
+        visibility: hidden;
+        &:after {
+          content: "";
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 10%;
+          width: 25px;
+          height: 12px;
+          border-left: 4px solid #ff4200;
+          border-bottom: 4px solid #ff4200;
+          transform: rotate(-45deg);
+        }
+      }
+      &:checked ~ &--ct:after {
+        display: block;
+      }
+    }
+  }
+}

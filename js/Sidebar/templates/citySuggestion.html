@@ -1,0 +1,10 @@
+<li class="added-cities__item clearfix">
+  <div class="added-cities__item-desc">
+    <p class="added-cities__item-name"><%= otherParts[0] %><span class="white"><%= matchedSubstring %></span><%= otherParts[1] %></p>
+    <p class="added-cities__item-status"><%= countryName %></p>
+  </div>
+  <form class="right">
+    <input class="added-cities__item-checkbox" data-city-name="<%= cityName %>" data-city-placeId="<%= placeId %>" type="checkbox" name="sg_<%= placeId %>" id="sg_<%= placeId %>" />
+    <label class="added-cities__item-checkbox--ct" for="sg_<%= placeId %>"></label>
+  </form>
+</li>

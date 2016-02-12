@@ -1,0 +1,19 @@
+
+@keyframes falling {
+  0% {
+    background-position: 300px 0;
+  }
+  100% {
+    background-position: 0 500px;
+  }
+}
+
+.snow {
+  background: url(../images/snow.png) repeat;
+  animation: falling 8s linear infinite;
+}
+
+.rain {
+  background: url(../images/rain.png) repeat;
+  animation: falling 3s linear infinite;
+}

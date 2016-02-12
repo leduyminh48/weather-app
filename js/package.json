@@ -1,0 +1,21 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "Weather App JS Libraries",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Duy Minh Le",
+  "license": "MIT",
+  "devDependencies": {
+    "backbone": "^1.2.3",
+    "gulp-uncss": "^1.0.4",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "requirejs": "^2.1.22",
+    "requirejs-plugins": "^1.0.2",
+    "requirejs-text": "^2.0.12",
+    "underscore": "^1.8.3"
+  }
+}

@@ -1,0 +1,75 @@
+.no-left-bd {
+  border-left: none;
+}
+
+.clearfix:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+
+/*for screen reader*/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto
+}
+
+
+/*for scroll bar*/
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 0;
+}
+
+.mCSB_scrollTools {
+  width: 8px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.selecting {
+  color: #ff4200
+}
+
+.has-selected i[class*=" icon-"]:before,
+.has-selected i[class^="icon-"]:before {
+  content: "M";
+}
+
+.no-result {
+  font-size: 3em;
+  line-height: 2em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.white {
+	color: #fff;
+}

@@ -1,0 +1,12 @@
+<li id="sb-<%= uid %>" class="added-cities__item clearfix">
+  <span class="added-cities__item-icon"><i class="icon-<%= forecast.currently.icon %>"></i></span>
+  <span class="added-cities__item-temp"><%= tempUnit === "C"? forecast.currently.temperature.toFixed(0) : convertToF(forecast.currently.temperature) %>&deg;</span>
+  <div class="added-cities__item-desc">
+	<p class="added-cities__item-name"><span class="white"> <%= cityName %> </span></p>
+    <p class="added-cities__item-status"><%= forecast.currently.summary %></p>
+  </div>
+  <form class="right">
+    <input class="added-cities__item-checkbox" type="checkbox" value="<%= uid %>" name="<%= uid %>" id="<%= uid %>" />
+    <label class="added-cities__item-checkbox--ct" for="<%= uid %>"></label>
+  </form>
+</li>

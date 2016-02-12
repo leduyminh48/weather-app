@@ -1,0 +1,33 @@
+body {
+  &.day {
+    &--cold-season {
+      background-color: $color-day-cold;
+    }
+
+    &--hot-season {
+      background-color: $color-day-hot;
+    }
+  }
+
+  &.evening {
+    &--cold-season {
+      background: linear-gradient(to right, $color-day-cold, $color-night);
+    }
+    &--hot-season {
+      background: linear-gradient(to right, $color-day-hot, $color-night);
+    }
+  }
+
+  &.morning {
+    &--cold-season {
+      background: linear-gradient(to left, $color-day-cold, $color-night);
+    }
+    &--hot-season {
+      background: linear-gradient(to left, $color-day-hot, $color-night);
+    }
+  }
+
+  &.night {
+    background-color: $color-night;
+  }
+}
