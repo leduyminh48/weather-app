@@ -12,7 +12,7 @@
     "backbone": "^1.2.3",
     "gulp-uncss": "^1.0.4",
     "jquery": "^2.1.4",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.20",
     "requirejs": "^2.1.22",
     "requirejs-plugins": "^1.0.2",
     "requirejs-text": "^2.0.12",
