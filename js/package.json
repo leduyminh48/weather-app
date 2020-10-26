@@ -11,7 +11,7 @@
   "devDependencies": {
     "backbone": "^1.2.3",
     "gulp-uncss": "^1.0.4",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.1",
     "lodash": "^3.10.1",
     "requirejs": "^2.1.22",
     "requirejs-plugins": "^1.0.2",
